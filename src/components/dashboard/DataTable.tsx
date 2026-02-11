@@ -250,7 +250,7 @@ export default function DataTable({ config }: DataTableProps) {
                           animate={{ opacity: 1, scale: 1 }}
                           className="flex flex-col items-center gap-3 text-muted-foreground"
                         >
-                          <img src="/favicon.ico" alt="NavME" className="w-12 h-12 opacity-30" />
+                          <img src="/favicon.ico" alt="NavMe" className="w-12 h-12 opacity-30" />
                           <p className="text-sm">{search ? "No results found for your search" : "Nothing here yet"}</p>
                           {!search && (
                             <motion.button

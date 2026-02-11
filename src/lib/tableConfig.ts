@@ -103,7 +103,7 @@ export const tableConfigs: Record<string, TableConfig> = {
   ar_user_presence: {
     tableName: "ar_user_presence",
     displayName: "Users",
-    description: "People using your NavME experience",
+    description: "People using your NavMe experience",
     primaryKey: "user_id",
     defaultSort: { key: "user_id", direction: "desc" },
     columns: [

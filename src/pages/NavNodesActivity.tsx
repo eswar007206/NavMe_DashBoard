@@ -97,7 +97,7 @@ export default function NavNodesActivity() {
               transition={{ duration: 0.7, type: "spring", bounce: 0.5 }}
               className="w-12 h-12 rounded-2xl overflow-hidden shadow-lg shadow-primary/25"
             >
-              <img src="/favicon.ico" alt="NavME" className="w-full h-full object-contain" />
+              <img src="/favicon.ico" alt="NavMe" className="w-full h-full object-contain" />
             </motion.div>
             <div>
               <h1 className="text-2xl font-bold text-foreground tracking-tight">
@@ -187,7 +187,7 @@ export default function NavNodesActivity() {
           </div>
         ) : chartData.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-[400px] text-muted-foreground">
-            <img src="/favicon.ico" alt="NavME" className="w-16 h-16 mb-4 opacity-30" />
+            <img src="/favicon.ico" alt="NavMe" className="w-16 h-16 mb-4 opacity-30" />
             <p className="text-sm font-medium">No activity recorded yet</p>
             <p className="text-xs mt-1">Activity will appear here once users start navigating</p>
           </div>

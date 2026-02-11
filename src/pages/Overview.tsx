@@ -129,14 +129,14 @@ export default function Overview() {
             transition={{ duration: 0.7, type: "spring", bounce: 0.5 }}
             className="w-12 h-12 rounded-2xl overflow-hidden shadow-lg shadow-primary/25"
           >
-            <img src="/favicon.ico" alt="NavME" className="w-full h-full object-contain" />
+            <img src="/favicon.ico" alt="NavMe" className="w-full h-full object-contain" />
           </motion.div>
           <div>
             <h1 className="text-2xl font-bold text-foreground tracking-tight">
               Dashboard
             </h1>
             <p className="text-sm text-muted-foreground mt-0.5">
-              Welcome to your NavME control panel
+              Welcome to your NavMe control panel
             </p>
           </div>
         </div>

@@ -63,7 +63,7 @@ export default function DashboardSidebar() {
           transition={{ duration: 0.3, type: "spring" }}
           className="w-9 h-9 rounded-xl shrink-0 overflow-hidden"
         >
-          <img src="/favicon.ico" alt="NavME" className="w-full h-full object-contain" />
+          <img src="/favicon.ico" alt="NavMe" className="w-full h-full object-contain" />
         </motion.div>
         {!collapsed && (
           <motion.span
@@ -72,7 +72,7 @@ export default function DashboardSidebar() {
             transition={{ delay: 0.2, duration: 0.4 }}
             className="text-lg font-bold tracking-tight text-foreground"
           >
-            NavME
+            NavMe
           </motion.span>
         )}
       </motion.div>
