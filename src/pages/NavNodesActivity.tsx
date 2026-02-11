@@ -74,7 +74,7 @@ export default function NavNodesActivity() {
   const totalPoints = rawNodes?.length ?? 0;
   const totalUsers = chartData.length;
   const topScore = chartData[0]?.points ?? 0;
-  const chartHeight = Math.max(400, chartData.length * 50);
+  const chartWidth = Math.max(600, chartData.length * 90);
 
   return (
     <motion.div
@@ -162,7 +162,7 @@ export default function NavNodesActivity() {
         ))}
       </motion.div>
 
-      {/* Horizontal Bar Chart */}
+      {/* Vertical Bar Chart */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -172,7 +172,7 @@ export default function NavNodesActivity() {
         <div className="flex items-center justify-between mb-6">
           <div>
             <h2 className="text-base font-semibold text-foreground">Activity Points per User</h2>
-            <p className="text-xs text-muted-foreground mt-0.5">Every navigation action earns 1 point — longer bars mean more active users</p>
+            <p className="text-xs text-muted-foreground mt-0.5">Every navigation action earns 1 point — taller bars mean more active users</p>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -192,54 +192,55 @@ export default function NavNodesActivity() {
             <p className="text-xs mt-1">Activity will appear here once users start navigating</p>
           </div>
         ) : (
-          <div style={{ height: chartHeight }}>
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={chartData} layout="vertical" barCategoryGap="25%" margin={{ left: 20, right: 30, top: 5, bottom: 5 }}>
-                <defs>
-                  {chartData.map((_, i) => (
-                    <linearGradient key={i} id={`barGrad${i}`} x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor={BAR_COLORS[i % BAR_COLORS.length]} stopOpacity={0.7} />
-                      <stop offset="100%" stopColor={BAR_COLORS[i % BAR_COLORS.length]} stopOpacity={1} />
-                    </linearGradient>
-                  ))}
-                </defs>
-                <CartesianGrid
-                  strokeDasharray="3 3"
-                  stroke="hsla(225, 15%, 20%, 0.4)"
-                  horizontal={false}
-                />
-                <XAxis
-                  type="number"
-                  tick={{ fill: "hsl(220, 15%, 55%)", fontSize: 11 }}
-                  axisLine={false}
-                  tickLine={false}
-                  allowDecimals={false}
-                />
-                <YAxis
-                  type="category"
-                  dataKey="name"
-                  tick={{ fill: "hsl(210, 40%, 96%)", fontSize: 13, fontWeight: 600 }}
-                  axisLine={false}
-                  tickLine={false}
-                  width={120}
-                />
-                <Tooltip
-                  content={<CustomTooltip />}
-                  cursor={{ fill: "hsla(225, 15%, 20%, 0.3)", radius: 8 }}
-                />
-                <Bar
-                  dataKey="points"
-                  radius={[4, 12, 12, 4]}
-                  maxBarSize={40}
-                  animationDuration={1200}
-                  animationEasing="ease-out"
-                >
-                  {chartData.map((_, i) => (
-                    <Cell key={i} fill={`url(#barGrad${i})`} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
+          <div className="overflow-x-auto scrollbar-glass -mx-2 px-2">
+            <div style={{ width: chartWidth, minWidth: "100%", height: 400 }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={chartData} barCategoryGap="20%" margin={{ left: 10, right: 10, top: 5, bottom: 5 }}>
+                  <defs>
+                    {chartData.map((_, i) => (
+                      <linearGradient key={i} id={`barGrad${i}`} x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor={BAR_COLORS[i % BAR_COLORS.length]} stopOpacity={1} />
+                        <stop offset="100%" stopColor={BAR_COLORS[i % BAR_COLORS.length]} stopOpacity={0.6} />
+                      </linearGradient>
+                    ))}
+                  </defs>
+                  <CartesianGrid
+                    strokeDasharray="3 3"
+                    stroke="hsla(225, 15%, 20%, 0.4)"
+                    vertical={false}
+                  />
+                  <XAxis
+                    dataKey="name"
+                    tick={{ fill: "hsl(210, 40%, 96%)", fontSize: 12, fontWeight: 600 }}
+                    axisLine={false}
+                    tickLine={false}
+                    dy={8}
+                    interval={0}
+                  />
+                  <YAxis
+                    tick={{ fill: "hsl(220, 15%, 55%)", fontSize: 11 }}
+                    axisLine={false}
+                    tickLine={false}
+                    allowDecimals={false}
+                  />
+                  <Tooltip
+                    content={<CustomTooltip />}
+                    cursor={{ fill: "hsla(225, 15%, 20%, 0.3)", radius: 8 }}
+                  />
+                  <Bar
+                    dataKey="points"
+                    radius={[12, 12, 4, 4]}
+                    maxBarSize={70}
+                    animationDuration={1200}
+                    animationEasing="ease-out"
+                  >
+                    {chartData.map((_, i) => (
+                      <Cell key={i} fill={`url(#barGrad${i})`} />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           </div>
         )}
       </motion.div>
