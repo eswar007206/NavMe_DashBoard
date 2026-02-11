@@ -351,7 +351,7 @@ export default function DataTable({ config }: DataTableProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4"
             onClick={(e) => e.target === e.currentTarget && closeForm()}
           >
             <motion.div
@@ -359,7 +359,7 @@ export default function DataTable({ config }: DataTableProps) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 40 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="glass-panel w-full max-w-lg max-h-[85vh] overflow-y-auto scrollbar-glass shadow-2xl shadow-black/50"
+              className="glass-panel w-full max-w-lg max-h-[85vh] overflow-y-auto scrollbar-glass shadow-2xl bg-background/80"
             >
               <div className="flex items-center justify-between px-6 py-5 border-b border-border/20">
                 <div>
@@ -466,7 +466,7 @@ export default function DataTable({ config }: DataTableProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4"
             onClick={(e) => e.target === e.currentTarget && setDeleteConfirm(null)}
           >
             <motion.div
@@ -474,7 +474,7 @@ export default function DataTable({ config }: DataTableProps) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.85, y: 30 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="glass-panel p-8 w-full max-w-sm text-center shadow-2xl"
+              className="glass-panel p-8 w-full max-w-sm text-center shadow-2xl bg-background/80"
             >
               <motion.div
                 initial={{ scale: 0 }}
