@@ -95,14 +95,15 @@
     --ring: 217 91% 60%;
 
     /* Glass Tokens - Dark Mode */
-    --glass: 222 47% 15%;
-    /* Distinct glass color */
-    --glass-border: 217 19% 35%;
+    --glass: 222 47% 18%;
+    /* Increased lightness for better contrast against background */
+    --glass-border: 217 19% 45%;
     /* Lighter border for visibility */
-    --glass-highlight: 217 91% 60%;
-    --glass-accent: 217 91% 60%;
+    --glass-highlight: 221 83% 53%;
+    --glass-accent: 221 83% 53%;
     --glass-warning: 35 90% 55%;
-    --glass-success: 155 70% 45%;
+    --glass-success: 221 83% 53%;
+    /* Unified green success with blue clue color */
     --glass-info: 210 85% 60%;
 
     --sidebar-background: 222 47% 10%;

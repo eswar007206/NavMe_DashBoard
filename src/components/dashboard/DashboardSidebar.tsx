@@ -93,7 +93,7 @@ export default function DashboardSidebar() {
               onClick={() => navigate(item.path)}
               className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 relative overflow-hidden ${
                 isActive
-                  ? "bg-primary/15 text-primary shadow-[0_0_25px_hsla(175,80%,50%,0.12)]"
+                  ? "bg-primary/15 text-primary shadow-[0_0_25px_hsla(var(--primary),0.12)]"
                   : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
               }`}
             >

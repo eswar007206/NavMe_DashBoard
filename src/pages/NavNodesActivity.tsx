@@ -6,7 +6,7 @@ import { RefreshCw, Loader2, TrendingUp, Trophy, Users, BarChart3 } from "lucide
 import { supabase } from "@/lib/supabase";
 
 const BAR_COLORS = [
-  "hsl(175, 80%, 50%)",
+  "hsl(221, 83%, 53%)", // Updated to Blue (Primary)
   "hsl(265, 75%, 60%)",
   "hsl(35, 90%, 55%)",
   "hsl(155, 70%, 45%)",
@@ -206,26 +206,26 @@ export default function NavNodesActivity() {
                   </defs>
                   <CartesianGrid
                     strokeDasharray="3 3"
-                    stroke="hsla(225, 15%, 20%, 0.4)"
+                    stroke="hsla(var(--muted-foreground), 0.2)"
                     vertical={false}
                   />
                   <XAxis
                     dataKey="name"
-                    tick={{ fill: "hsl(210, 40%, 96%)", fontSize: 12, fontWeight: 600 }}
+                    tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12, fontWeight: 600 }}
                     axisLine={false}
                     tickLine={false}
                     dy={8}
                     interval={0}
                   />
                   <YAxis
-                    tick={{ fill: "hsl(220, 15%, 55%)", fontSize: 11 }}
+                    tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
                     axisLine={false}
                     tickLine={false}
                     allowDecimals={false}
                   />
                   <Tooltip
                     content={<CustomTooltip />}
-                    cursor={{ fill: "hsla(225, 15%, 20%, 0.3)", radius: 8 }}
+                    cursor={{ fill: "hsla(var(--glass), 0.4)", radius: 12 }}
                   />
                   <Bar
                     dataKey="points"

@@ -47,16 +47,16 @@ function formatCellValue(value: unknown, col: ColumnConfig): string {
 
 function StatusBadge({ value }: { value: string }) {
   const colors: Record<string, string> = {
-    Yes: "bg-emerald-500/15 text-emerald-400 ring-1 ring-emerald-500/20",
+    Yes: "bg-blue-500/15 text-blue-400 ring-1 ring-blue-500/20",
     No: "bg-red-500/15 text-red-400 ring-1 ring-red-500/20",
-    Y: "bg-emerald-500/15 text-emerald-400 ring-1 ring-emerald-500/20",
+    Y: "bg-blue-500/15 text-blue-400 ring-1 ring-blue-500/20",
     N: "bg-red-500/15 text-red-400 ring-1 ring-red-500/20",
     PENDING: "bg-amber-500/15 text-amber-400 ring-1 ring-amber-500/20",
-    ACCEPTED: "bg-emerald-500/15 text-emerald-400 ring-1 ring-emerald-500/20",
+    ACCEPTED: "bg-blue-500/15 text-blue-400 ring-1 ring-blue-500/20",
     REJECTED: "bg-red-500/15 text-red-400 ring-1 ring-red-500/20",
     EXPIRED: "bg-gray-500/15 text-gray-400 ring-1 ring-gray-500/20",
   };
-  const cls = colors[value] || "bg-blue-500/15 text-blue-400 ring-1 ring-blue-500/20";
+  const cls = colors[value] || "bg-blue-500/15 text-blue-500 ring-1 ring-blue-500/20";
   return (
     <span className={`inline-flex items-center px-2.5 py-1 rounded-lg text-[11px] font-semibold tracking-wide ${cls}`}>
       {value}
@@ -155,7 +155,7 @@ export default function DataTable({ config }: DataTableProps) {
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
         className="flex items-center justify-between gap-4"
       >
-        <div className="glass-input flex items-center gap-2.5 flex-1 max-w-md group focus-within:shadow-[0_0_30px_hsla(175,80%,50%,0.12)]">
+        <div className="glass-input flex items-center gap-2.5 flex-1 max-w-md group focus-within:shadow-[0_0_30px_hsla(221,83%,53%,0.12)]">
           <Search className="w-4 h-4 text-muted-foreground group-focus-within:text-primary transition-colors" />
           <input
             type="text"
@@ -189,7 +189,7 @@ export default function DataTable({ config }: DataTableProps) {
             <RefreshCw className="w-4 h-4" />
           </motion.button>
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 0 30px hsla(175, 80%, 50%, 0.3)" }}
+            whileHover={{ scale: 1.05, boxShadow: "0 0 30px hsla(221, 83%, 53%, 0.3)" }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400 }}
             onClick={openAddForm}
@@ -400,7 +400,7 @@ export default function DataTable({ config }: DataTableProps) {
                           placeholder={col.placeholder}
                           required={col.required}
                           rows={3}
-                          className="glass-input w-full resize-none focus:shadow-[0_0_25px_hsla(175,80%,50%,0.1)]"
+                          className="glass-input w-full resize-none focus:shadow-[0_0_25px_hsla(221,83%,53%,0.1)]"
                         />
                       ) : col.type === "select" && col.options ? (
                         <select
@@ -420,7 +420,7 @@ export default function DataTable({ config }: DataTableProps) {
                           onChange={(e) => setFormData({ ...formData, [col.key]: e.target.value })}
                           placeholder={col.placeholder}
                           required={col.required}
-                          className="glass-input w-full focus:shadow-[0_0_25px_hsla(175,80%,50%,0.1)]"
+                          className="glass-input w-full focus:shadow-[0_0_25px_hsla(221,83%,53%,0.1)]"
                         />
                       )}
                     </motion.div>
@@ -444,7 +444,7 @@ export default function DataTable({ config }: DataTableProps) {
                   </motion.button>
                   <motion.button
                     type="submit"
-                    whileHover={{ scale: 1.03, boxShadow: "0 0 30px hsla(175, 80%, 50%, 0.3)" }}
+                    whileHover={{ scale: 1.03, boxShadow: "0 0 30px hsla(221, 83%, 53%, 0.3)" }}
                     whileTap={{ scale: 0.97 }}
                     disabled={isInserting || isUpdating}
                     className="h-10 px-6 rounded-xl bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-semibold text-sm flex items-center gap-2 disabled:opacity-50 shadow-lg shadow-primary/20"
