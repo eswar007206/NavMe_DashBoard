@@ -1,4 +1,4 @@
-import { Moon, Sun } from "lucide-react";
+import { LuMoon as Moon, LuSun as Sun } from "react-icons/lu";
 import { useTheme } from "@/components/theme-provider";
 import { motion } from "framer-motion";
 

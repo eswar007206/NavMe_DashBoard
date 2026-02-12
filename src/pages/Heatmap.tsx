@@ -10,16 +10,16 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import {
-  Flame,
-  Clock,
-  MapPin,
-  Users,
-  TrendingUp,
-  Eye,
-  EyeOff,
-  Calendar,
-  Timer,
-} from "lucide-react";
+  LuFlame as Flame,
+  LuClock as Clock,
+  LuMapPin as MapPin,
+  LuUsers as Users,
+  LuTrendingUp as TrendingUp,
+  LuEye as Eye,
+  LuEyeOff as EyeOff,
+  LuCalendar as Calendar,
+  LuTimer as Timer,
+} from "react-icons/lu";
 import {
   heatmapStores,
   trafficData,

@@ -2,15 +2,15 @@ import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import {
-  FolderOpen,
-  ShoppingBag,
-  Tag,
-  Store,
-  Users,
-  TrendingUp,
-  ArrowRight,
-  Activity,
-} from "lucide-react";
+  LuFolderOpen as FolderOpen,
+  LuShoppingBag as ShoppingBag,
+  LuTag as Tag,
+  LuStore as Store,
+  LuUsers as Users,
+  LuTrendingUp as TrendingUp,
+  LuArrowRight as ArrowRight,
+  LuActivity as Activity,
+} from "react-icons/lu";
 import { supabase } from "@/lib/supabase";
 import { tableOrder, tableConfigs } from "@/lib/tableConfig";
 

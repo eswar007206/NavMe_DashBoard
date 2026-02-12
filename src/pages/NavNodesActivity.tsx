@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts";
-import { RefreshCw, Loader2, TrendingUp, Trophy, Users, BarChart3 } from "lucide-react";
+import { LuRefreshCw as RefreshCw, LuLoaderCircle as Loader2, LuTrendingUp as TrendingUp, LuTrophy as Trophy, LuUsers as Users, LuChartColumn as BarChart3 } from "react-icons/lu";
 import { supabase } from "@/lib/supabase";
 
 const BAR_COLORS = [

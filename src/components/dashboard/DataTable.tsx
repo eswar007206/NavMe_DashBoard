@@ -1,17 +1,17 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Plus,
-  Pencil,
-  Trash2,
-  RefreshCw,
-  Search,
-  ChevronLeft,
-  ChevronRight,
-  X,
-  Loader2,
-  AlertCircle,
-} from "lucide-react";
+  LuPlus as Plus,
+  LuPencil as Pencil,
+  LuTrash2 as Trash2,
+  LuRefreshCw as RefreshCw,
+  LuSearch as Search,
+  LuChevronLeft as ChevronLeft,
+  LuChevronRight as ChevronRight,
+  LuX as X,
+  LuLoaderCircle as Loader2,
+  LuCircleAlert as AlertCircle,
+} from "react-icons/lu";
 import type { TableConfig, ColumnConfig } from "@/lib/tableConfig";
 import { useTableData } from "@/hooks/useTableData";
 import { format } from "date-fns";

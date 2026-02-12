@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShieldCheck, ShieldOff, X, Check } from "lucide-react";
+import { LuShieldCheck as ShieldCheck, LuShieldOff as ShieldOff, LuX as X, LuCheck as Check } from "react-icons/lu";
 import { heatmapStores } from "@/data/heatmapData";
 
 interface ShopStatus {

@@ -7,8 +7,8 @@
 @layer base {
   :root {
     /* Light Mode */
-    --background: 210 40% 96%;
-    /* Slightly darker to make white cards pop */
+    --background: 216 28% 90%;
+    /* Cool gray so white cards pop clearly */
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
@@ -21,10 +21,10 @@
     /* Blue (Clue Color) */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 214 22% 93%;
     --secondary-foreground: 222 47% 11.2%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 214 22% 93%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
     --accent: 221 83% 53%;
@@ -34,15 +34,15 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 214.3 31.8% 82%;
+    --input: 214.3 31.8% 82%;
     --ring: 221 83% 53%;
 
     --radius: 1rem;
 
     /* Glass Tokens - Light Mode */
     --glass: 0 0% 100%;
-    --glass-border: 220 13% 80%;
+    --glass-border: 220 13% 68%;
     --glass-highlight: 221 83% 53%;
     /* Blue Highlight */
     --glass-accent: 221 83% 53%;
@@ -54,9 +54,9 @@
     --sidebar-foreground: 222 47% 11%;
     --sidebar-primary: 221 83% 53%;
     --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 210 40% 96.1%;
+    --sidebar-accent: 214 22% 93%;
     --sidebar-accent-foreground: 222 47% 11%;
-    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-border: 214.3 31.8% 82%;
     --sidebar-ring: 221 83% 53%;
   }
 
@@ -131,15 +131,15 @@
 @layer components {
   .glass-panel {
     @apply relative overflow-hidden rounded-2xl;
-    background: hsla(var(--glass), 0.75);
-    /* More opaque */
+    background: hsla(var(--glass), 0.95);
+    /* Nearly solid so cards clearly stand out from background */
     backdrop-filter: blur(40px) saturate(180%);
     -webkit-backdrop-filter: blur(40px) saturate(180%);
-    border: 2px solid hsla(var(--glass-border), 0.5);
+    border: 2.5px solid hsla(var(--glass-border), 0.65);
     /* Thicker and more visible border */
     box-shadow:
-      0 8px 32px hsla(0, 0%, 0%, 0.1),
-      inset 0 1px 0 hsla(var(--glass-border), 0.2);
+      0 8px 32px hsla(0, 0%, 0%, 0.08),
+      inset 0 1px 0 hsla(0, 0%, 100%, 0.6);
   }
 
   .glass-panel-hover {
@@ -159,14 +159,14 @@
     background: hsla(var(--sidebar-background), 0.8);
     backdrop-filter: blur(60px) saturate(200%);
     -webkit-backdrop-filter: blur(60px) saturate(200%);
-    border-right: 2px solid hsla(var(--glass-border), 0.1);
+    border-right: 2.5px solid hsla(var(--glass-border), 0.25);
   }
 
   .glass-input {
     @apply rounded-xl px-4 py-3 text-sm font-medium;
     background: hsla(var(--glass), 0.6);
     backdrop-filter: blur(20px);
-    border: 2px solid hsla(var(--glass-border), 0.4);
+    border: 2.5px solid hsla(var(--glass-border), 0.5);
     /* clearer input border */
     color: hsl(var(--foreground));
     transition: all 0.3s ease;

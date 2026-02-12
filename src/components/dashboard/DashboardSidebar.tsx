@@ -2,18 +2,18 @@ import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  LayoutDashboard,
-  FolderOpen,
-  ShoppingBag,
-  Tag,
-  Store,
-  Users,
-  Activity,
-  Flame,
-  ShieldCheck,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+  LuLayoutDashboard as LayoutDashboard,
+  LuFolderOpen as FolderOpen,
+  LuShoppingBag as ShoppingBag,
+  LuTag as Tag,
+  LuStore as Store,
+  LuUsers as Users,
+  LuActivity as Activity,
+  LuFlame as Flame,
+  LuShieldCheck as ShieldCheck,
+  LuChevronLeft as ChevronLeft,
+  LuChevronRight as ChevronRight,
+} from "react-icons/lu";
 
 const menuItems = [
   { icon: LayoutDashboard, label: "Dashboard", path: "/" },
