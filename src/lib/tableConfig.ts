@@ -100,6 +100,9 @@ export const tableConfigs: Record<string, TableConfig> = {
       { key: "file_name", label: "File Name", type: "text", editable: true, showInTable: true, showInForm: true },
       { key: "mime_type", label: "Mime Type", type: "text", editable: true, showInTable: true, showInForm: true },
       { key: "shop_url", label: "Website", type: "text", editable: true, showInTable: true, showInForm: true, placeholder: "https://" },
+      { key: "ambiance_desc", label: "Ambiance", type: "textarea", editable: true, showInTable: true, showInForm: true, placeholder: "Describe the ambiance..." },
+      { key: "technology_desc", label: "Technology", type: "textarea", editable: true, showInTable: true, showInForm: true, placeholder: "Describe the technology..." },
+      { key: "highlight_desc", label: "Highlights", type: "textarea", editable: true, showInTable: true, showInForm: true, placeholder: "Describe the highlights..." },
     ],
   },
 
